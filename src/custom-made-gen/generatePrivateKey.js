@@ -1,18 +1,17 @@
-const crypto = require('crypto');
+const crypto = require("crypto");
 
 function generatePrivateKey() {
   return new Promise((resolve, reject) => {
     crypto.randomBytes(32, (err, buf) => {
-      if (err) {       
+      if (err) {
         reject(err);
         return;
       }
 
-      const privateKey = buf.toString('hex');
-      resolve(privateKey)
+      const privateKey = buf.toString("hex");
+      resolve(privateKey);
     });
   });
 }
 
 module.exports = generatePrivateKey;
-
