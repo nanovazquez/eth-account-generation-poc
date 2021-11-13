@@ -6,7 +6,7 @@ function getAddressFromPublicKey(publicKey) {
   const kh = keccak256(publicKey);
   const address = Buffer.from(kh, "hex").slice(-20).toString("hex");
 
-  return address;
+  return `0x${address}`;
 }
 
 module.exports = getAddressFromPublicKey;
