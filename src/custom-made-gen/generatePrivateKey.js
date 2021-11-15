@@ -9,7 +9,7 @@ function generatePrivateKey() {
       }
 
       const privateKey = buf.toString("hex");
-      resolve(privateKey);
+      resolve(`0x${privateKey}`);
     });
   });
 }
