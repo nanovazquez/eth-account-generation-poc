@@ -1,7 +1,9 @@
 const ethWallet = require("ethereumjs-wallet").default;
 
 function getAddressFromPrivateKey(privateKey) {
-  let data = ethWallet.fromPrivateKey(Buffer.from(privateKey, "hex"));
+  const privateKeyWithNoPrefix = privateKey.startsWith("0x") ? privateKey.slice(2) : privateKey;
+
+  let data = ethWallet.fromPrivateKey(Buffer.from(privateKeyWithNoPrefix, "hex"));
   return data.getAddressString();
 }
 

@@ -3,7 +3,7 @@ const getPublicKeyFromPrivateKey = require("./custom-made-gen/getPublicKeyFromPr
 const getAddressFromPublicKey = require("./custom-made-gen/getAddressFromPublicKey");
 
 const generatePrivateKey_ethereumjs = require("./with-ethereum-js/generatePrivateKey");
-const getAddressFromPrivateKey_ethereumjs = require("./with-ethereum-js/generatePrivateKey");
+const getAddressFromPrivateKey_ethereumjs = require("./with-ethereum-js/getAddressFromPrivateKey");
 
 (async function main() {
   try {
