@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<title>Generar transaccion de Metamask a otra cuenta</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="">
+<style>
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.6.1/web3.min.js"></script>
+<body>
+
+<div class="">
+ <h1>Generar transaccion</h1>
+ <p>Direccion a transferir:</p>
+ <input id="txAddress" value="0x85dAbaa40e0f455dA1a3E170A6911d88a7A90737" style="width:400px" />
+ <p>Monto en wei:</p>
+ <input id="txAmount" value="1"  />
+ <br/> <br/>
+ <input type="button" value="Enviar" onClick="enviarTransaccion()" />
+</div>
+
+<script>
+
+    const { ethereum } = window;
+    const b = Boolean(ethereum && ethereum.isMetaMask);
+
+    async function enviarTransaccion() {
+        // Obtener datos de la pagina
+        const direccion = document.getElementById("txAddress").value;
+        const monto = document.getElementById("txAmount").value;
+
+        // Configurar web3
+        let web3provider = window.ethereum;
+        try {
+            // Request account access
+            await web3provider.request({ method: "eth_requestAccounts" });;
+        } catch (error) {
+
+            console.log(error)
+            // User denied account access...
+            console.error("User denied account access")
+        }
+
+        const web3 = new Web3(web3provider);
+
+        const accounts = await web3.eth.getAccounts();
+        const account = accounts[0];
+
+        web3.eth.sendTransaction({to: direccion,value: monto, from: account});        
+
+
+    }
+
+</script>
+
+</body>
+</html>
