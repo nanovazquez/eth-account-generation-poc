@@ -12,7 +12,7 @@ const getAddressFromPrivateKey_ethereumjs = require("./with-ethereum-js/generate
     console.log("----------------------------");
 
     const privateKey = await generatePrivateKey();
-    console.log("The private key is:", privateKey);
+    console.log("The private key is: ", privateKey);
 
     const publicKey = getPublicKeyFromPrivateKey(privateKey);
     console.log("The public key is:", publicKey);
