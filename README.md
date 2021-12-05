@@ -7,11 +7,16 @@ It consists of two demos:
 1. Private/Public key + blockchain address generation
 1. Transaction initialization using web3
 
-# Private/Public key + blockchain address generation
+## Setup
+
+1. Install [Node.js](https://nodejs.org/en/) in your machine.
+1. In the root folder, run `npm i`.
+
+## Private/Public key + blockchain address generation
 
 To run this demo, simply execute in a terminal `node src/demo-1.js`. The generated information will be shown in the terminal.
 
-# Transaction initialization using web3
+## Transaction initialization using web3
 
 > **Prerequisites:** > _ Metamask wallet extension installed of your browser.
 > _ Accounts set up in the metamask wallet.
