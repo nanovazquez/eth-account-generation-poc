@@ -1,9 +1,33 @@
 {
+  "name": "eth-account-generation-poc",
+  "description": "This repo is a POC to validate a generation of an ethereum account using private/public key encyption.",
+  "version": "1.0.0",
+  "main": "index.js",
   "dependencies": {
     "bn.js": "^5.2.0",
     "crypto": "^1.0.1",
     "elliptic": "^6.5.4",
     "ethereumjs-wallet": "^1.0.2",
     "js-sha3": "^0.8.0"
-  }
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nanovazquez/eth-account-generation-poc.git"
+  },
+  "keywords": [
+    "ethereum",
+    "account",
+    "generation",
+    "poc"
+  ],
+  "author": "nanovazquez",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nanovazquez/eth-account-generation-poc/issues"
+  },
+  "homepage": "https://github.com/nanovazquez/eth-account-generation-poc#readme"
 }

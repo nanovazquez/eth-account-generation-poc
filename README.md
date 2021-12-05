@@ -1,4 +1,4 @@
-# eth-account-generation-poc
+# Ethereum account generation POC
 
 This repo is a POC to validate a generation of an ethereum account using private/public key encyption.
 
