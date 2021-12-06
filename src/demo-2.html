@@ -6,16 +6,19 @@
   <link rel="stylesheet" href="" />
   <style></style>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.6.1/web3.min.js"></script>
+  <link rel="stylesheet" href="style.css"><link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
   <body>
-    <div class="">
-      <h1>Generar transaccion</h1>
-      <p>Cuennta a transferir:</p>
-      <input id="destinationAccount" style="width: 400px" />
+    <div class="mainDiv">
+      <h1 class="center">Generar transacción</h1>
+      <p>Cuenta a transferir:</p>
+      <input class="input" id="destinationAccount" style="width: 400px" />
       <p>Monto en wei:</p>
-      <input id="amountToTransfer" value="1" />
+      <input class="input" id="amountToTransfer" value="1" />
       <br />
       <br />
-      <input type="button" value="Enviar" onClick="sendTransaction()" />
+      <input class="btn" type="button" value="Enviar" onClick="sendTransaction()" />
     </div>
 
     <script>
